@@ -1,0 +1,6 @@
+#openOffice配置文件
+jodconverter:
+  enabled: true
+  officeHome: C:\Program Files (x86)\OpenOffice 4
+  portNumbers: 8100
+  maxTasksPerProcess: 10

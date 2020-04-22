@@ -1,0 +1,9 @@
+# Mybatis设置
+mybatis:
+    #设置mybatis的xml文件
+    mapperLocations: classpath:mapper/sqlserver/*.xml
+    configuration:
+      #控制台打印sql，方便调试
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+      #下划线转换驼峰配置
+      map-underscore-to-camel-case: true

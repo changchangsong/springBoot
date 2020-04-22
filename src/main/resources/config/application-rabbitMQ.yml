@@ -1,0 +1,8 @@
+#rabbitmq消息队列配置文件
+#使用：http://localhost:15672进行测试，默认的登陆账号为：guest，密码为：guest
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest

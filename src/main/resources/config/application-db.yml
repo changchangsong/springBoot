@@ -1,0 +1,25 @@
+#数据库配置文件
+spring:
+    datasource:
+        url: jdbc:sqlserver://129.1.1.136:1433;databaseName=EH_underWaterProspecting
+
+        username: sa
+        password: Aa147258
+
+        #连接池的配置信息
+        initialSize: 10
+        minIdle: 10
+        maxActive: 100
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+#项目的控制台中看到sql语句信息
+logging:
+  level:
+    com.songyl.mapper: trace

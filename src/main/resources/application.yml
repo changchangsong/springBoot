@@ -1,0 +1,35 @@
+#端口设置
+server:
+  port: 9066
+
+#日志记录
+logging:
+  config: classpath:logback.xml
+
+spring:
+  profiles:
+    include:
+      - db #数据库设置
+      - rabbitMQ #rabbitMQ消息队列设置
+      - ftp #ftp设置
+      - mybatis #mybatis设置
+      - jodconverter #openoffice设置
+      - redis #redis配置
+      - permission #登陆拦截
+  http:
+    converters:
+      preferred-json-mapper: fastjson #使用fastjson转换器
+  #热部署生效
+  devtools:
+    restart:
+      enabled: true
+  #上传文件大小控制
+  servlet:
+      multipart:
+        enabled: true
+        max-file-size: 1024MB #单个文件最大大小
+        max-request-size: 2048MB #上传数据总大小
+
+
+
+

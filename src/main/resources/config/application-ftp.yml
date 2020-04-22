@@ -1,0 +1,6 @@
+#ftp信息配置
+ftp:
+  host: 127.0.0.1
+  port: 21
+  username: forftp
+  password: ftp

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.example.demo.dao.AbnormalTableDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+	<resultMap
+		type="com.example.demo.entity.AbnormalTableEntity"
+		id="abnormalTableMap">
+		<result property="id" column="ID" />
+		<result property="positionId" column="POSITION_ID" />
+		<result property="underWaterInspectId" column="UNDER_WATER_INSPECT_ID" />
+		<result property="abnormalPileNumber" column="ABNORMAL_PILE_NUMBER" />
+		<result property="abnormalVolume" column="ABNORMAL_VOLUME" />
+		<result property="abnormalAcreage" column="ABNORMAL_ACREAGE" />
+		<result property="abnormalDescribe" column="ABNORMAL_DESCRIBE" />
+		<result property="addTime" column="ADD_TIME" />
+		<result property="addUserid" column="ADD_USERID" />
+		<result property="lastOperateTime" column="LAST_OPERATE_TIME" />
+		<result property="lastOperateUserid" column="LAST_OPERATE_USERID" />
+		<result property="isDelete" column="IS_DELETE" />
+	</resultMap>
+
+	<select id="queryObject"
+		resultType="com.example.demo.entity.AbnormalTableEntity">
+		select * from T_ABNORMAL_TABLE where ID = #{value}
+	</select>
+
+
+</mapper>
